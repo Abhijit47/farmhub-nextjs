@@ -76,7 +76,7 @@ export default function HeaderTwo() {
                     <i className='fa-solid fa-magnifying-glass'></i>
                   </Link>
                   <div className='header-button d-sm-block d-none'>
-                    <Link href='/#' className='cmn-btn round100'>
+                    <Link href='#contact' className='cmn-btn round100'>
                       Get A Quote
                       <i className='fa-solid fa-arrow-right'></i>
                     </Link>

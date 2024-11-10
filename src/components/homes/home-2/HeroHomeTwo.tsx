@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
+
+import HERO_BANNER from '/public/assets/img/banner/hero-v2.png';
 
 export default function HeroHomeTwo() {
   return (
@@ -29,12 +32,12 @@ export default function HeroHomeTwo() {
                     className='banner-buttonv2 wow fadeInUp'
                     data-wow-delay='1s'>
                     <Link
-                      href='/about'
+                      href='#why-choose-us'
                       className='cmn-btn round100 primary-border'>
                       Read More
                       <i className='fa-solid fa-angle-right'></i>
                     </Link>
-                    <a href='#' className='header-help'>
+                    <Link href={`tel:${8085550111}`} className='header-help'>
                       <span className='icon d-center'>
                         <i className='fa-solid fa-phone'></i>
                       </span>
@@ -42,7 +45,7 @@ export default function HeroHomeTwo() {
                         <span className='need'>Need help?</span>
                         <span className='call'>(808) 555-0111</span>
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -50,10 +53,15 @@ export default function HeroHomeTwo() {
           </div>
         </div>
 
-        <img
-          src='assets/img/banner/hero-v2.png'
+        <Image
+          src='/assets/img/banner/hero-v2.png'
           alt='img'
           className='hero-v02-thumb'
+          width={1036}
+          height={800}
+          placeholder='blur'
+          blurDataURL={HERO_BANNER.blurDataURL}
+          priority={true}
         />
       </section>
     </>

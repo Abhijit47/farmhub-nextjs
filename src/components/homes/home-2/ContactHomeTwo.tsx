@@ -1,11 +1,13 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function ContactHomeTwo() {
   return (
     <>
       <section
         id='contact'
-        className='talking-section overflow-hidden space-top'>
+        className='talking-section overflow-hidden space-top space-bottom'>
         <div className='container'>
           <div className='row g-4 align-items-xl-center flex-row-reverse justify-content-between'>
             <div className='col-md-6'>
@@ -45,10 +47,12 @@ export default function ContactHomeTwo() {
               <div
                 className='taklking-cotnact-thumb w-100 wow fadeInRight'
                 data-wow-delay='.4s'>
-                <img
-                  src='assets/img/contact/talking-contact.png'
+                <Image
+                  src='/assets/img/contact/talking-contact.png'
                   alt='img'
-                  className='w-100'
+                  className='w-100 h-100 object-fit-cover'
+                  width={710}
+                  height={620}
                 />
               </div>
             </div>

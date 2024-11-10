@@ -1,7 +1,7 @@
-import { Metadata } from 'next';
 // import HomeOne from '@/components/homes/home';
 import HomeTwo from '@/components/homes/home-2';
 import Wrapper from '@/layouts/Wrapper';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'FarmHub - Agriculture Farming Next js Template',
