@@ -1,19 +1,22 @@
+//////////////// unnessecary sections start
+// import CounterHomeOne from '../home/CounterHomeOne';
+// import BlogHomeTwo from './BlogHomeTwo';
+// import FeatureHomeTwo from './FeatureHomeTwo';
+// import ProjectHomeTwo from './ProjectHomeTwo';
+// import TeamHomeTwo from './TeamHomeTwo';
+// import WorkProcessHomeTwo from './WorkProcessHomeTwo';
+//////////////// unnessecary sections end
+
 import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderTwo from '@/layouts/headers/HeaderTwo';
-import BrandHomeOne from '../home/BrandHomeOne';
-// import CounterHomeOne from '../home/CounterHomeOne';
+// import FaqHomeThree from '../home-3/FaqHomeThree';
+// import BrandHomeOne from '../home/BrandHomeOne';
 import AboutHomeTwo from './AboutHomeTwo';
-// import BlogHomeTwo from './BlogHomeTwo';
-import ContactHomeTwo from './ContactHomeTwo';
-// import FeatureHomeTwo from './FeatureHomeTwo';
+// import ContactHomeTwo from './ContactHomeTwo';
 import HeroHomeTwo from './HeroHomeTwo';
-// import ProjectHomeTwo from './ProjectHomeTwo';
 import ServiceHomeTwo from './ServiceHomeTwo';
-import SubscribeHomeTwo from './SubscribeHomeTwo';
-// import TeamHomeTwo from './TeamHomeTwo';
-import FaqHomeThree from '../home-3/FaqHomeThree';
-import TestimonialHomeTwo from './TestimonialHomeTwo';
-// import WorkProcessHomeTwo from './WorkProcessHomeTwo';
+// import SubscribeHomeTwo from './SubscribeHomeTwo';
+// import TestimonialHomeTwo from './TestimonialHomeTwo';
 
 export default function HomeTwo() {
   return (
@@ -22,18 +25,30 @@ export default function HomeTwo() {
       <HeroHomeTwo />
       <AboutHomeTwo />
       <ServiceHomeTwo />
+
+      {/* nessecary part */}
+      {/* <TestimonialHomeTwo /> */}
+
+      {/* nessecary part */}
+      {/* <BrandHomeOne style_2={true} /> */}
+
+      {/* nessecary part */}
+      {/* <ContactHomeTwo /> */}
+
+      {/* nessecary part */}
+      {/* <FaqHomeThree /> */}
+
+      {/* nessecary part */}
+      {/* <SubscribeHomeTwo /> */}
+      <FooterOne />
+
+      {/* unnessecary sections */}
       {/* <WorkProcessHomeTwo /> */}
       {/* <ProjectHomeTwo /> */}
-      <TestimonialHomeTwo />
-      <BrandHomeOne style_2={true} />
       {/* <TeamHomeTwo /> */}
       {/* <CounterHomeOne style_2={true} /> */}
       {/* <FeatureHomeTwo /> */}
-      <ContactHomeTwo />
-      <FaqHomeThree />
       {/* <BlogHomeTwo /> */}
-      <SubscribeHomeTwo />
-      <FooterOne />
     </>
   );
 }
