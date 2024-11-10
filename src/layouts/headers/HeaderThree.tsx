@@ -40,12 +40,14 @@ export default function HeaderThree() {
                   </li>
                 </ul>
                 <div className='social-wrapper d-flex align-items-center'>
-                  <a href='#' className='white'>
+                  <Link href='#' className='white'>
+                    <span className={'visually-hidden'}>pinterest</span>
                     <i className='white fa-brands fa-pinterest-p'></i>
-                  </a>
-                  <a href='#' className='white'>
+                  </Link>
+                  <Link href='#' className='white'>
+                    <span className={'visually-hidden'}>linkedin</span>
                     <i className='white fa-brands fa-linkedin-in'></i>
-                  </a>
+                  </Link>
                   <a href='#' className='white'>
                     <svg
                       width='11'
@@ -59,9 +61,10 @@ export default function HeaderThree() {
                       />
                     </svg>
                   </a>
-                  <a href='#' className='white'>
+                  <Link href='#' className='white'>
+                    <span className={'visually-hidden'}>facebook</span>
                     <i className='white fab fa-facebook-f'></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
