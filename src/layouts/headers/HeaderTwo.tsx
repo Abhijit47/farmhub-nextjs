@@ -1,5 +1,6 @@
 'use client';
 
+import PopUpModal from '@/components/common/Modal';
 import Offcanvas from '@/components/common/Offcanvas';
 import SearchBar from '@/components/common/SearchBar';
 import useSticky from '@/hooks/use-sticky';
@@ -12,28 +13,37 @@ export default function HeaderTwo() {
   const { sticky } = useSticky();
   const [open, setOpen] = useState(false);
   const [serchOpen, setSearchOpen] = useState(false);
+  const [show, setShow] = useState(false);
+
+  function toggleCanvas() {
+    setOpen((prev) => !prev);
+  }
+
+  function toggleModal() {
+    return setShow((prev) => !prev);
+  }
 
   return (
     <>
       <div className='header-top-section style-v01 d-lg-block d-none'>
         <div className='container'>
           <div className='header-top-wrapper'>
-            <a href='#' className='location-area'>
+            <Link href='#' className='location-area'>
               <i className='fa-solid fa-location-dot'></i>
               2464 Royal Ln. Mesa, New Jersey 45463
-            </a>
+            </Link>
             <ul className='contact-list'>
               <li>
-                <a href='#'>
+                <Link href={'tel:6295550129'}>
                   <i className='fa-solid fa-phone'></i>
                   (629) 555-0129
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='debbie.baker@example.com' className='link'>
+                <Link href='mailto:debbie.baker@example.com' className='link'>
                   <i className='fa-solid fa-envelope'></i>
                   debbie.baker@example.com
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -47,8 +57,8 @@ export default function HeaderTwo() {
           <div className='mega-menu-wrapper'>
             <div className='header-main'>
               <div className='header-left w-25 h-25'>
-                <div className='logo'>
-                  <Link href='/' className='header-logo'>
+                <div className='logo w-50 h-50'>
+                  <Link href='#header-sticky' className='header-logo'>
                     <Image
                       src='/assets/img/logo/Logo_t.png'
                       alt='logo-img'
@@ -76,16 +86,17 @@ export default function HeaderTwo() {
                     <i className='fa-solid fa-magnifying-glass'></i>
                   </Link>
                   <div className='header-button d-sm-block d-none'>
-                    <Link href='#contact' className='cmn-btn round100'>
+                    <button
+                      type='button'
+                      className='cmn-btn round100'
+                      onClick={toggleModal}>
                       Get A Quote
                       <i className='fa-solid fa-arrow-right'></i>
-                    </Link>
+                    </button>
                   </div>
                 </div>
                 <div className='header__hamburger d-xl-none my-auto'>
-                  <div
-                    className='sidebar__toggle'
-                    onClick={() => setOpen(!open)}>
+                  <div className='sidebar__toggle' onClick={toggleCanvas}>
                     <i className='fas fa-bars'></i>
                   </div>
                 </div>
@@ -95,8 +106,9 @@ export default function HeaderTwo() {
         </div>
       </header>
 
-      <Offcanvas open={open} setOpen={setOpen} />
+      <Offcanvas open={open} onToogleCanvas={toggleCanvas} />
       <SearchBar serchOpen={serchOpen} setSearchOpen={setSearchOpen} />
+      <PopUpModal isOpen={show} onToggleModal={toggleModal} />
     </>
   );
 }

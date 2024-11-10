@@ -1,7 +1,7 @@
-"use client"
-import useSticky from "@/hooks/use-sticky";
-import React, { useState, useEffect } from "react";
+'use client';
 
+import useSticky from '@/hooks/use-sticky';
+import { useEffect, useState } from 'react';
 
 const ScrollToTop = () => {
   const { sticky }: { sticky: boolean } = useSticky();
@@ -17,22 +17,24 @@ const ScrollToTop = () => {
   };
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
-    return () => window.removeEventListener("scroll", checkScrollTop);
+    window.addEventListener('scroll', checkScrollTop);
+    return () => window.removeEventListener('scroll', checkScrollTop);
   }, []);
 
   return (
     <>
       <button
-        className={`scrollToTop d-none d-md-flex d-center ${sticky && "active"}`}
+        className={`scrollToTop d-none d-md-flex d-center ${
+          sticky && 'active'
+        }`}
         onClick={scrollTop}
-        style={{cursor: "pointer"}}
-        aria-label="scroll Bar Button">
-        <i className="mat-icon fas fa-angle-double-up"></i>
+        style={{ cursor: 'pointer' }}
+        aria-label='scroll Bar Button'>
+        <i className='mat-icon fas fa-angle-double-up'></i>
       </button>
     </>
   );

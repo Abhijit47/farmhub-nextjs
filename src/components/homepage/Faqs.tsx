@@ -1,10 +1,12 @@
 'use client';
+
 import faq_data from '@/data/faq_data';
 import VideoPopup from '@/modals/VideoPopup';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
-export default function FaqHomeThree() {
+export default function Faqs() {
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(0);
 
@@ -14,7 +16,7 @@ export default function FaqHomeThree() {
 
   return (
     <>
-      <section className='faq-section section-padding p100-bg'>
+      <section id={'faq'} className='faq-section section-padding p100-bg'>
         <div className='container'>
           <div className='row g-md-4 g-2 align-items-center justify-content-between'>
             <div className='col-lg-5 col-md-6'>
@@ -35,12 +37,14 @@ export default function FaqHomeThree() {
                     editors now use Lorem Ipsum as their default model text
                   </p>
                   <div className='faq-watch'>
-                    <a
+                    <Link
+                      href='#faq'
                       onClick={() => setIsVideoOpen(true)}
                       style={{ cursor: 'pointer' }}
                       className='video-cmn d-center video-popup'>
+                      <span className={'visually-hidden'}>faq-video</span>
                       <i className='fa-solid fa-play'></i>
-                    </a>
+                    </Link>
                     <h5>Watch Video</h5>
                   </div>
                 </div>

@@ -32,7 +32,11 @@ export default function ContactHomeTwo() {
                       <input type='text' placeholder='Subject' />
                     </div>
                     <div className='col-lg-12'>
-                      <textarea name='message' placeholder='Message'></textarea>
+                      <textarea
+                        name='message'
+                        placeholder='Message'
+                        rows={4}
+                        style={{ resize: 'none' }}></textarea>
                     </div>
                     <div className='col-lg-6'>
                       <button type='submit' className='cmn-btn text-capitalize'>

@@ -1,13 +1,14 @@
 import MobileMenu from '@/layouts/headers/menu/MobileMenu';
+import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 type Props = {
   open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  // setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  onToogleCanvas: () => void;
 };
 
-export default function Offcanvas({ open, setOpen }: Props) {
+export default function Offcanvas({ open, onToogleCanvas }: Props) {
   return (
     <>
       <div className='fix-area'>
@@ -17,11 +18,17 @@ export default function Offcanvas({ open, setOpen }: Props) {
               <div className='offcanvas__top mb-4 d-flex justify-content-between align-items-center'>
                 <div className='offcanvas__logo'>
                   <Link href='/'>
-                    <img src='assets/img/logo/favcion.png' alt='logo-img' />
+                    <Image
+                      src='/assets/img/logo/favcion.png'
+                      alt='logo-img'
+                      width={38}
+                      height={40}
+                    />
                   </Link>
                 </div>
                 <div className='offcanvas__close'>
-                  <button onClick={() => setOpen(false)}>
+                  <button onClick={onToogleCanvas}>
+                    <span className={'visually-hidden'}>close canvas</span>
                     <i className='fas fa-times'></i>
                   </button>
                 </div>
@@ -37,9 +44,9 @@ export default function Offcanvas({ open, setOpen }: Props) {
                       <i className='fal fa-map-marker-alt'></i>
                     </div>
                     <div className='offcanvas__contact-text'>
-                      <a target='_blank' href='#'>
+                      <Link target='_blank' href='#'>
                         Us 1216, road 45 house of street
-                      </a>
+                      </Link>
                     </div>
                   </li>
                   <li className='d-flex align-items-center'>
@@ -47,11 +54,13 @@ export default function Offcanvas({ open, setOpen }: Props) {
                       <i className='fal fa-envelope'></i>
                     </div>
                     <div className='offcanvas__contact-text'>
-                      <a href='mailto:demo23yourmail.com'>
+                      <Link
+                        href='mailto:demo23yourmail.com'
+                        onClick={onToogleCanvas}>
                         <span className='mailto:demo23yourmail.com'>
                           demo23yourmail.com
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </li>
                   <li className='d-flex align-items-center'>
@@ -59,9 +68,9 @@ export default function Offcanvas({ open, setOpen }: Props) {
                       <i className='fal fa-clock'></i>
                     </div>
                     <div className='offcanvas__contact-text'>
-                      <a target='_blank' href='#'>
+                      <Link target='_blank' href='#'>
                         Mod-friday, 06am -02pm
-                      </a>
+                      </Link>
                     </div>
                   </li>
                   <li className='d-flex align-items-center'>
@@ -69,30 +78,35 @@ export default function Offcanvas({ open, setOpen }: Props) {
                       <i className='far fa-phone'></i>
                     </div>
                     <div className='offcanvas__contact-text'>
-                      <a href='tel:+11002345909'>(307) 555-0133</a>
+                      <Link href='tel:+11002345909' onClick={onToogleCanvas}>
+                        (307) 555-0133
+                      </Link>
                     </div>
                   </li>
                 </ul>
                 <div className='header-button mt-4 mb-4'>
-                  <Link href='/#' className='cmn-btn'>
+                  <Link
+                    href='#contact'
+                    className='cmn-btn'
+                    onClick={onToogleCanvas}>
                     Get A Quote
                     <i className='fa-solid fa-arrow-right'></i>
                   </Link>
                 </div>
                 <h4>Social Media</h4>
                 <div className='social-icon d-flex align-items-center'>
-                  <a href='#'>
+                  <Link href='#'>
                     <i className='fab fa-facebook-f'></i>
-                  </a>
-                  <a href='#'>
+                  </Link>
+                  <Link href='#'>
                     <i className='fab fa-twitter'></i>
-                  </a>
-                  <a href='#'>
+                  </Link>
+                  <Link href='#'>
                     <i className='fab fa-youtube'></i>
-                  </a>
-                  <a href='#'>
+                  </Link>
+                  <Link href='#'>
                     <i className='fab fa-linkedin-in'></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -101,7 +115,7 @@ export default function Offcanvas({ open, setOpen }: Props) {
       </div>
       <div
         className={`offcanvas__overlay ${open ? 'overlay-open' : ''}`}
-        onClick={() => setOpen(false)}></div>
+        onClick={onToogleCanvas}></div>
     </>
   );
 }
