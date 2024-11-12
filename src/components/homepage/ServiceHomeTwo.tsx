@@ -32,7 +32,7 @@ export default function ServiceHomeTwo() {
                   <Image
                     src='/assets/img/service/service1.jpg'
                     alt='img'
-                    className='w-100 mimg'
+                    className='w-100 mimg h-100'
                     width={410}
                     height={291}
                   />
@@ -44,15 +44,48 @@ export default function ServiceHomeTwo() {
                       alt='svg'
                       width={75}
                       height={75}
+                      className='w-auto h-auto'
                     />
                   </div>
                   <Link href='/#' className='title'>
-                    Green Grow Solutions
+                    Horticulture & Aquaculture Bio-farming Solutions
                   </Link>
                   <p>
-                    Amet lectus mi ultricies dictum facilisis sem. Imperdiet
-                    massa turpis
+                    Establish ecological, aquaculture and CEA farms that promote
+                    sustainability and productivity.
                   </p>
+                  {/* <ul className='about-list2'>
+                    <li
+                      className={
+                        'd-flex flex-column justify-content-start align-items-start'
+                      }>
+                      <span className={'d-flex gap-2 align-items-center'}>
+                        <i className='fa-solid fa-check d-block'></i>
+                        <strong className={'text-light fs-6'}>
+                          Ecological & Sustainable Farming Setup
+                        </strong>
+                      </span>
+                      <p className={'fs-6 display-6'}>
+                        Establish organic, natural, residual free farms that
+                        support soil health and biodiversity.
+                      </p>
+                    </li>
+                    <li
+                      className={
+                        'd-flex flex-column justify-content-start align-items-start'
+                      }>
+                      <span className={'d-flex gap-2 align-items-center'}>
+                        <i className='fa-solid fa-check d-block'></i>
+                        <strong className={'text-light fs-6'}>
+                          Ecological & Sustainable Farming Setup
+                        </strong>
+                      </span>
+                      <p className={'fs-6 display-6'}>
+                        Establish organic, natural, residual free farms that
+                        support soil health and biodiversity.
+                      </p>
+                    </li>
+                  </ul> */}
                   <Link href='/#' className='arrows'>
                     Read More <i className='fa-solid fa-angle-right'></i>
                   </Link>
@@ -67,7 +100,7 @@ export default function ServiceHomeTwo() {
                   <Image
                     src='/assets/img/service/service2.jpg'
                     alt='img'
-                    className='w-100 mimg'
+                    className='w-100 mimg h-100'
                     width={410}
                     height={291}
                   />
@@ -79,14 +112,16 @@ export default function ServiceHomeTwo() {
                       alt='svg'
                       width={75}
                       height={75}
+                      className='w-auto h-auto'
                     />
                   </div>
                   <Link href='/#' className='title'>
-                    Farm Services
+                    Farming 4.0 FaaS Platform
                   </Link>
                   <p>
-                    Amet lectus mi ultricies dictum facilisis sem. Imperdiet
-                    massa turpis
+                    Leverage IoT and data-driven insights for smarter farming
+                    decisions. Our platform offers a range of services from
+                    weather forecasting to soil health monitoring..
                   </p>
                   <Link href='/#' className='arrows'>
                     Read More <i className='fa-solid fa-angle-right'></i>
@@ -102,7 +137,7 @@ export default function ServiceHomeTwo() {
                   <Image
                     src='/assets/img/service/service3.jpg'
                     alt='img'
-                    className='w-100 mimg'
+                    className='w-100 mimg h-100'
                     width={410}
                     height={291}
                   />
@@ -114,14 +149,16 @@ export default function ServiceHomeTwo() {
                       alt='svg'
                       width={75}
                       height={75}
+                      className='w-auto h-auto'
                     />
                   </div>
                   <Link href='/#' className='title'>
-                    AgriPro Consulting
+                    Modern Agronomy Consulting
                   </Link>
                   <p>
-                    Amet lectus mi ultricies dictum facilisis sem. Imperdiet
-                    massa turpis
+                    Tailored strategies to implement impactful ESG, carbon
+                    credit and CSR projects to enhance your social
+                    responsibility with our expert guidance
                   </p>
                   <Link href='/#' className='arrows'>
                     Read More <i className='fa-solid fa-angle-right'></i>

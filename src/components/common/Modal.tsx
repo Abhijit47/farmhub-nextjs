@@ -1,4 +1,5 @@
 import { Button, Modal } from 'react-bootstrap';
+import { InlineWidget } from 'react-calendly';
 
 type Props = {
   isOpen: boolean;
@@ -13,21 +14,21 @@ export default function PopUpModal({ isOpen, onToggleModal }: Props) {
       backdrop='static'
       centered={true}
       keyboard={false}
-      size='lg'
+      size='xl'
       // className='modal-dialog modal-lg'
       onBackdropClick={onToggleModal}>
       <Modal.Header closeButton>
-        <Modal.Title className='text-primary'>Modal title</Modal.Title>
+        <Modal.Title className='text-primary font-monospace display-6'>
+          Schedule a meeting with us
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body className='text-primary'>
-        I will not close if you click outside me. Do not even try to press
-        escape key.
+        <InlineWidget url='https://calendly.com/finnoaq/30min' />
       </Modal.Body>
       <Modal.Footer>
         <Button variant='secondary' onClick={onToggleModal}>
           Close
         </Button>
-        <Button variant='primary'>Understood</Button>
       </Modal.Footer>
     </Modal>
   );

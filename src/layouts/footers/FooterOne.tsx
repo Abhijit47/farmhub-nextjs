@@ -99,16 +99,16 @@ export default function FooterOne() {
                   </div>
                   <ul className='list-area'>
                     <li>
-                      <Link href='/#'>About Us</Link>
+                      <Link href='#about'>About Us</Link>
                     </li>
                     <li>
-                      <Link href='/#'>Service</Link>
+                      <Link href='#services'>Product & Service</Link>
                     </li>
                     <li>
-                      <Link href='/#'>FAQ</Link>
+                      <Link href='#success-stories'>Success Stories</Link>
                     </li>
                     <li>
-                      <Link href='/#'>Blog Ang News</Link>
+                      <Link href='#faq'>FAQ&apos;s</Link>
                     </li>
                   </ul>
                 </div>
@@ -122,26 +122,26 @@ export default function FooterOne() {
                   </div>
                   <ul className='list-area list-contact'>
                     <li>
-                      <Link href={`mailto:debra.holt@example.com`}>
+                      <Link href={`mailto:finnoaq@gmail.com`}>
                         <i className='fa-solid fa-envelope'></i>
-                        debra.holt@example.com
+                        finnoaq@gmail.com
                       </Link>
                     </li>
                     <li>
-                      <Link href='info@example.com' className='link'>
+                      <Link href='#' className='link'>
                         <i className='fa-solid fa-location-dot'></i>
                         1901 Thornridge Cir. Shiloh, <br /> Hawaii 81063
                       </Link>
                     </li>
                     <li>
-                      <Link href={`tel:${2705550117}`} className='link'>
+                      <Link href={`tel:${8100533280}`} className='link'>
                         <i className='fa-solid fa-phone'></i>
-                        (270) 555-0117
+                        +91 8100533280
                       </Link>
-                      <Link href={`tel:${2705550118}`} className='link'>
+                      {/* <Link href={`tel:${2705550118}`} className='link'>
                         <i className='fa-solid fa-phone'></i>
                         (270) 555-0118
-                      </Link>
+                      </Link> */}
                     </li>
                   </ul>
                 </div>

@@ -18,15 +18,21 @@ export default function HeroHomeTwo() {
                     Farming for tomorrow
                   </h5>
                   <h1 className='wow fadeInUp' data-wow-delay='0.5s'>
+                    Transforming Food Farming Future{' '}
+                    <span className={''}>
+                      with our Sustainable
+                      <br /> Climate Smart Biofarming Solutions
+                    </span>
+                  </h1>
+                  {/* <h1 className='wow fadeInUp' data-wow-delay='0.5s'>
                     Farming is ours heritage{' '}
                     <span>
                       future <br /> our harvest
                     </span>
-                  </h1>
+                  </h1> */}
                   <p className='wow fadeInUp' data-wow-delay='0.7s'>
-                    We have been operating for over a decade, providing
-                    top-notch services to our clients and building a strong
-                    track record in the industry.
+                    Join us in revolutionising the farming landscape with our
+                    climate-smart innovations and sustainable practices.
                   </p>
                   <div
                     className='banner-buttonv2 wow fadeInUp'
@@ -37,7 +43,12 @@ export default function HeroHomeTwo() {
                       Read More
                       <i className='fa-solid fa-angle-right'></i>
                     </Link>
-                    <Link href={`tel:${8085550111}`} className='header-help'>
+                    {/* <Link href={`tel:${8085550111}`} className='header-help'> */}
+                    <Link
+                      href={`https://wa.link/5bv1ow`}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='header-help'>
                       <span className='icon d-center'>
                         <i className='fa-solid fa-phone'></i>
                       </span>

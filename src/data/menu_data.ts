@@ -36,16 +36,26 @@ const menu_data: DataType[] = [
     link: '#about',
     has_dropdown: false,
   },
-  {
-    id: 2,
-    title: 'Why Choose Us',
-    link: '#why-choose-us',
-    has_dropdown: false,
-  },
+  // {
+  //   id: 2,
+  //   title: 'Why Choose Us',
+  //   link: '#why-choose-us',
+  //   has_dropdown: false,
+  // },
   {
     id: 3,
-    title: 'Service',
+    title: 'Products & Services',
     link: '#services',
+    has_dropdown: false,
+    // sub_menus: [
+    // 	{ link: "/service", title: "Services" },
+    // 	{ link: "/service-details", title: "Services Details" },
+    // ],
+  },
+  {
+    id: 4,
+    title: 'Success Stories',
+    link: '#success-stories',
     has_dropdown: false,
     // sub_menus: [
     // 	{ link: "/service", title: "Services" },

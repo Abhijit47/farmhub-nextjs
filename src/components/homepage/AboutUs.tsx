@@ -19,9 +19,13 @@ export default function AboutUs() {
                     Bringing natures bounty to your plate
                   </h2>
                   <p className='wow fadeInUp' data-wow-delay='.4s'>
-                    Agriculture and farming are essential industries that
-                    involve the cultivation of crops, raising of livestock, and
-                    production
+                    At Finno AQ, we envision a world of sustainable smart farms
+                    where food farming is both productive, profitable and
+                    sustainable. Our mission is to empower farmers by providing
+                    customised <strong>climate-smart, data-driven tools</strong>{' '}
+                    and <strong>climate-smart, data-driven tools</strong> they
+                    need to thrive in a changing climate, ensuring quality food
+                    and nutritional security for everyone.
                   </p>
                   <div className='progress_bar d-grid gap-xxl-4 gap-4'>
                     <div className='progress_bar_item'>

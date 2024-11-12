@@ -28,13 +28,20 @@ export default function Faqs() {
                     FAQ
                   </h5>
                   <h2 className='wow fadeInDown' data-wow-delay='.3s'>
-                    How often should I water my Farming?
+                    Ready to Transform Your Farm ?
                   </h2>
                   <p>
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout. Many desktop publishing packages and web page
-                    editors now use Lorem Ipsum as their default model text
+                    Partner with Finno AQ today to explore our{' '}
+                    <strong> full-stack phygital farm-tech solutions</strong>.{' '}
+                    <br />
+                    Don’t wait for the future; embrace it today! <br />{' '}
+                    Together, we can create a sustainable, productive farming
+                    ecosystem that benefits your farm, your community, and the
+                    planet. <br />{' '}
+                    <em>
+                      Get in touch with us today and let’s cultivate success
+                      together!
+                    </em>
                   </p>
                   <div className='faq-watch'>
                     <Link

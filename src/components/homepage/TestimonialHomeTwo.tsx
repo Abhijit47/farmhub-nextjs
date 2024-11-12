@@ -6,7 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export default function TestimonialHomeTwo() {
   return (
     <>
-      <section className='testimonial-section stylev02 overflow-hidden space-top p100-bg'>
+      <section
+        id='success-stories'
+        className='testimonial-section stylev02 overflow-hidden space-top p100-bg'>
         <div className='container'>
           <div className='row g-4 align-items-center'>
             <div className='col-lg-6 col-md-6'>
@@ -24,10 +26,10 @@ export default function TestimonialHomeTwo() {
                   loop={true}
                   slidesPerView={1}
                   speed={1300}
-                  // autoplay={{
-                  //   delay: 2000,
-                  //   disableOnInteraction: false,
-                  // }}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
                   navigation={{
                     nextEl: '.cmn-next1',
                     prevEl: '.cmn-prev1',

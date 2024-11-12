@@ -29,20 +29,20 @@ export default function HeaderTwo() {
         <div className='container'>
           <div className='header-top-wrapper'>
             <Link href='#' className='location-area'>
-              <i className='fa-solid fa-location-dot'></i>
-              2464 Royal Ln. Mesa, New Jersey 45463
+              <i className='fa-solid fa-location-dot'></i> 2464 Royal Ln. Mesa,
+              New Jersey 45463
             </Link>
             <ul className='contact-list'>
               <li>
-                <Link href={'tel:6295550129'}>
+                <Link href={'tel:8100533280'}>
                   <i className='fa-solid fa-phone'></i>
-                  (629) 555-0129
+                  +91 8100533280
                 </Link>
               </li>
               <li>
-                <Link href='mailto:debbie.baker@example.com' className='link'>
+                <Link href='mailto:finnoaq@gmail.com' className='link'>
                   <i className='fa-solid fa-envelope'></i>
-                  debbie.baker@example.com
+                  finnoaq@gmail.com
                 </Link>
               </li>
             </ul>
@@ -90,8 +90,8 @@ export default function HeaderTwo() {
                       type='button'
                       className='cmn-btn round100'
                       onClick={toggleModal}>
-                      Get A Quote
-                      <i className='fa-solid fa-arrow-right'></i>
+                      Book a call
+                      <i className='fa-solid fa-phone'></i>
                     </button>
                   </div>
                 </div>
@@ -106,7 +106,11 @@ export default function HeaderTwo() {
         </div>
       </header>
 
-      <Offcanvas open={open} onToogleCanvas={toggleCanvas} />
+      <Offcanvas
+        open={open}
+        onToogleCanvas={toggleCanvas}
+        onToggleModal={toggleModal}
+      />
       <SearchBar serchOpen={serchOpen} setSearchOpen={setSearchOpen} />
       <PopUpModal isOpen={show} onToggleModal={toggleModal} />
     </>

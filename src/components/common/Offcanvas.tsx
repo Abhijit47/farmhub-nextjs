@@ -6,9 +6,14 @@ type Props = {
   open: boolean;
   // setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   onToogleCanvas: () => void;
+  onToggleModal?: () => void;
 };
 
-export default function Offcanvas({ open, onToogleCanvas }: Props) {
+export default function Offcanvas(props: Props) {
+  const { open, onToogleCanvas, onToggleModal } = props;
+
+  const toggleModal = onToggleModal ? onToggleModal : () => {};
+
   return (
     <>
       <div className='fix-area'>
@@ -55,11 +60,9 @@ export default function Offcanvas({ open, onToogleCanvas }: Props) {
                     </div>
                     <div className='offcanvas__contact-text'>
                       <Link
-                        href='mailto:demo23yourmail.com'
+                        href='mailto:finnoaq@gmail.com'
                         onClick={onToogleCanvas}>
-                        <span className='mailto:demo23yourmail.com'>
-                          demo23yourmail.com
-                        </span>
+                        <span className=''>finnoaq@gmail.com</span>
                       </Link>
                     </div>
                   </li>
@@ -78,8 +81,8 @@ export default function Offcanvas({ open, onToogleCanvas }: Props) {
                       <i className='far fa-phone'></i>
                     </div>
                     <div className='offcanvas__contact-text'>
-                      <Link href='tel:+11002345909' onClick={onToogleCanvas}>
-                        (307) 555-0133
+                      <Link href='tel:+918100533280' onClick={onToogleCanvas}>
+                        +91 8100533280
                       </Link>
                     </div>
                   </li>
@@ -88,7 +91,10 @@ export default function Offcanvas({ open, onToogleCanvas }: Props) {
                   <Link
                     href='#contact'
                     className='cmn-btn'
-                    onClick={onToogleCanvas}>
+                    onClick={() => {
+                      onToogleCanvas();
+                      toggleModal();
+                    }}>
                     Get A Quote
                     <i className='fa-solid fa-arrow-right'></i>
                   </Link>
